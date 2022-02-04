@@ -31,7 +31,8 @@ When deploying the stack, docker-compose maps container ports to host ports. Mak
 - docker-compose
 
 ## Usage
-Create `.env` file in root directory with the following content:
+### Run
+Create `.env` file in root directory with:
 ```
 MYSQL_ROOT_PASSWORD=yoursecretpassword
 ```
@@ -43,6 +44,7 @@ Run stack:
 docker-compose up -d
 ```
 
+### Check
 Listing containers must show three containers running and the port mapping:
 ```
 docker ps
@@ -62,6 +64,7 @@ Scrape process (`scrape_and_upload.py`) is being run chronically with 5 minutes 
 👏 **Seems like you are getting all the juicy Haxball data. Sweet.**
 
 
+### Tear down
 If you got enough, stop and remove the containers. Use `-v` to remove the volumes if looking to erase all data.
 ```
 $ docker-compose down -v
